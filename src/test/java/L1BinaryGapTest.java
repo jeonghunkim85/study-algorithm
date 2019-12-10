@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.Assert.*;
@@ -38,7 +39,8 @@ class L1BinaryGapTest {
     }
 
     @Test
-    void test1() {
+    @DisplayName("문제에 주어진 케이스1")
+    void test_theGivenCase() {
         //given
         final int input = 1041;
         final int expected = 5;
@@ -52,7 +54,8 @@ class L1BinaryGapTest {
     }
 
     @Test
-    void test2() {
+    @DisplayName("String으로 input할 경우의 해 1")
+    void test_inputWithStringCase1() {
         final String input = "10000010001";
         final int expected = 5;
 
@@ -62,7 +65,8 @@ class L1BinaryGapTest {
     }
 
     @Test
-    void test3() {
+    @DisplayName("String으로 input할 경우의 해 2")
+    void test_inputWithStringCase2() {
         final String input = "100000";
         final int expected = 0;
 
@@ -72,7 +76,8 @@ class L1BinaryGapTest {
     }
 
     @Test
-    void test4() {
+    @DisplayName("String으로 input할 경우의 해 3")
+    void test_inputWithStringCase3() {
         final String input = "110101011000000000100000000000000001";
         final int expected = 16;
 
@@ -82,6 +87,7 @@ class L1BinaryGapTest {
     }
 
     @Test
+    @DisplayName("입력값을 음수로 했을 경우 exception 테스트")
     void expectRangeOutExceptionTest() {
         final int negativeNumber = -10;
         Assertions.assertThrows(IllegalArgumentException.class, () -> solution.solution(negativeNumber));
