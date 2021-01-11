@@ -1,3 +1,5 @@
+package codility;
+
 import org.springframework.util.Assert;
 
 public class L1_BinaryGap {
