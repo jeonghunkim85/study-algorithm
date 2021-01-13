@@ -34,22 +34,19 @@
 
 package leetcode;
 
-import org.hamcrest.MatcherAssert;
-import org.hamcrest.Matchers;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
-import java.util.Arrays;
 import java.util.stream.Stream;
 
 import static org.hamcrest.MatcherAssert.*;
 import static org.hamcrest.Matchers.*;
 import static org.junit.jupiter.params.provider.Arguments.of;
 
-class P1_twosumTest {
+class P1_TwosumTest {
 
-    P1_twosum towsum = new P1_twosum();
+    P1_Twosum towsum = new P1_Twosum();
 
     @ParameterizedTest
     @MethodSource("getTestCases")
